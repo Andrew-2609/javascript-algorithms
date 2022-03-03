@@ -1,4 +1,4 @@
-const listaLivros = [
+const livros = [
     {
         titulo: "JavaScript for Beginners",
         preco: 25
@@ -20,3 +20,5 @@ const listaLivros = [
         preco: 20
     }
 ];
+
+module.exports = livros;
