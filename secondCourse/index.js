@@ -21,7 +21,21 @@ function juntarListas(primeiraLista, segundaLista) {
         posicaoAtualListaFinal++;
     }
 
+    while (posicaoAtualPrimeiraLista < primeiraLista.length) {
+        listaFinal[posicaoAtualListaFinal] = primeiraLista[posicaoAtualPrimeiraLista];
+        posicaoAtualPrimeiraLista++;
+        posicaoAtualListaFinal++;
+    }
+
+    while (posicaoAtualSegundaLista < segundaLista.length) {
+        listaFinal[posicaoAtualListaFinal] = segundaLista[posicaoAtualSegundaLista];
+        posicaoAtualSegundaLista++;
+        posicaoAtualListaFinal++;
+    }
+
     return listaFinal;
 }
 
-console.log(juntarListas(edGalho, edFolha));
+const listaCompleta = juntarListas(edGalho, edFolha);
+console.log(listaCompleta);
+console.log(`Comprimento da lista completa: ${listaCompleta.length} elemento(s).`);
