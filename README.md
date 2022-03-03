@@ -1,4 +1,4 @@
-# JavaScript Algorithms I
+# JavaScript Algorithms
 
 Simple project covering some common algorithms with JavaScript, such as sorting algorithms and their use.
 
