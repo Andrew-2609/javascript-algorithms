@@ -1,7 +1,7 @@
 function menorValor(arrProdutos, posicaoInicial) {
     let maisBarato = posicaoInicial;
 
-    for (let atual = 0; atual < arrProdutos.length; atual++) {
+    for (let atual = posicaoInicial; atual < arrProdutos.length; atual++) {
         if (arrProdutos[atual].preco < arrProdutos[maisBarato].preco) {
             maisBarato = atual;
         }
@@ -13,7 +13,7 @@ function menorValor(arrProdutos, posicaoInicial) {
 function maiorValor(arrProdutos, posicaoInicial) {
     let maisCaro = posicaoInicial;
 
-    for (let atual = 0; atual < arrProdutos.length; atual++) {
+    for (let atual = posicaoInicial; atual < arrProdutos.length; atual++) {
         if (arrProdutos[atual].preco > arrProdutos[maisCaro].preco) {
             maisCaro = atual;
         }
@@ -22,5 +22,5 @@ function maiorValor(arrProdutos, posicaoInicial) {
     return maisCaro;
 }
 
-module.exports.menorValor = menorValor()
-module.exports.maiorValor = maiorValor()
+module.exports.menorValor = menorValor
+module.exports.maiorValor = maiorValor
