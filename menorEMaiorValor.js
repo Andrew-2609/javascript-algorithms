@@ -1,17 +1,26 @@
-const livros = require('./listaLivros');
+function menorValor(arrProdutos, posicaoInicial) {
+    let maisBarato = posicaoInicial;
 
-let maisBarato = 0;
-let maisCaro = 0;
-
-for (let atual = 0; atual < livros.length; atual++) {
-    if (livros[atual].preco < livros[maisBarato].preco) {
-        maisBarato = atual;
+    for (let atual = 0; atual < arrProdutos.length; atual++) {
+        if (arrProdutos[atual].preco < arrProdutos[maisBarato].preco) {
+            maisBarato = atual;
+        }
     }
 
-    if (livros[atual].preco > livros[maisCaro].preco) {
-        maisCaro = atual;
-    }
+    return maisBarato;
 }
 
-console.log(`O livro mais barato custa R$${livros[maisBarato].preco}.`);
-console.log(`O livro mais caro custa R$${livros[maisCaro].preco}.`);
+function maiorValor(arrProdutos, posicaoInicial) {
+    let maisCaro = posicaoInicial;
+
+    for (let atual = 0; atual < arrProdutos.length; atual++) {
+        if (arrProdutos[atual].preco > arrProdutos[maisCaro].preco) {
+            maisCaro = atual;
+        }
+    }
+
+    return maisCaro;
+}
+
+module.exports.menorValor = menorValor()
+module.exports.maiorValor = maiorValor()
