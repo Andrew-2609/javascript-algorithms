@@ -1,4 +1,4 @@
-const listaLivros = [
+const array = [
     {
         titulo: "Go",
         preco: 45
@@ -45,4 +45,4 @@ const listaLivros = [
     },
 ];
 
-module.exports = listaLivros
+module.exports = array
