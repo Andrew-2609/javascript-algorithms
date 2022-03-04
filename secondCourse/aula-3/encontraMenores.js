@@ -23,4 +23,22 @@ function trocarLugar(array, de, para) {
     array[de] = segundoElemento;
 }
 
-console.log(encontrarMenores(listaLivros[2], listaLivros));
+function dividirNoPivo(array) {
+    let pivo = array[Math.floor(array.length / 2)];
+
+    encontrarMenores(pivo, array);
+
+    let valoresMenores = 0;
+
+    for (let analisando = 0; analisando < array.length; analisando++) {
+        let produtoAtual = array[analisando];
+        if (produtoAtual.preco < pivo.preco && analisando !== pivo) {
+            trocarLugar(array, analisando, valoresMenores);
+            valoresMenores++;
+        }
+    }
+
+    return array;
+}
+
+console.log(dividirNoPivo(listaLivros));
