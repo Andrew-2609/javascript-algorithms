@@ -41,4 +41,6 @@ function dividirNoPivo(array) {
     return array;
 }
 
-console.log(dividirNoPivo(listaLivros));
+// console.log(dividirNoPivo(listaLivros));
+
+module.exports = trocarLugar
