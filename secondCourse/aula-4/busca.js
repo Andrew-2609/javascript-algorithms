@@ -22,4 +22,6 @@ function buscar(array, de, ate, valorBuscado) {
 }
 
 console.log(buscar(listaLivros, 0, listaLivros.length - 1, 40));
-console.log(buscar(listaLivros, 0, listaLivros.length - 1, 60));
+console.log(buscar(listaLivros, 0, listaLivros.length - 1, 60)); // valor maior que todos no array
+console.log(buscar(listaLivros, 0, listaLivros.length - 1, 1)); // valor menor que todos no array
+console.log(buscar(listaLivros, 0, listaLivros.length - 1, 37)); // valor inexistente no meio do array
